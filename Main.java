@@ -12,6 +12,7 @@ public class Main {
 
         DiceRoller roller = new DiceRoller();
         DiceStats stats = new DiceStats();
+        SumValues sum = new SumValues();
 
         for (Dice dice : diceList) {
             dice.accept(roller);
@@ -20,6 +21,11 @@ public class Main {
 
         for (Dice dice : diceList) {
             dice.accept(stats);
+            System.out.println("");
+        }
+
+        for (Dice dice : diceList) {
+            dice.accept(sum);
             System.out.println("");
         }
     }
